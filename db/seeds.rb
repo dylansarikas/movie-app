@@ -22,3 +22,11 @@ actor.save
 10.times do
   Actor.create({first_name: FFaker::Name.first_name, last_name: FFaker::Name.last_name, known_for: FFaker::Movie.title})
 end
+
+movie1 = Movie.create({title: "The Imitation Game", year: 2014, plot: "During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life."})
+
+movie2 = Movie.create({title: "Star Trek Into Darkness", year: 2013, plot: "After the crew of the Enterprise find an unstoppable force of terror from within their own organization, Captain Kirk leads a manhunt to a war-zone world to capture a one-man weapon of mass destruction."})
+
+movie3 = Movie.create({title: "August: Osage County", year: 2013, plot: "A look at the lives of the strong-willed women of the Weston family, whose paths have diverged until a family crisis brings them back to the Oklahoma house they grew up in, and to the dysfunctional woman who raised them."})
+
+movie4 = Movie.create({title: "Doctor Strange", year: 2016, plot: "While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts."})
