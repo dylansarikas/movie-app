@@ -6,4 +6,11 @@ def choose_actor
   render json: actor.as_json
 end
 
+
+def show
+  number = params[:id].to_i
+  actor = Actor.find(number)
+  render json: actor.as_json
+end
+
 end
