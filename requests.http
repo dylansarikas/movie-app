@@ -1,0 +1,63 @@
+###Actors Index
+
+GET http://localhost:3000/actors
+
+###Actors Create
+
+POST http://localhost:3000/actors
+Content-Type: application/json
+
+{
+  "first_name": "Hornold",
+  "last_name": "Frunkerdink",
+  "known_for": "Faith 2"
+}
+
+###Actors Show
+GET http://localhost:3000/actors/24
+
+###Actors Update
+
+PATCH http://localhost:3000/actors/24
+Content-Type: application/json
+
+{
+  "first_name": "Banister",
+  "last_name": "Crumblebench"
+}
+
+###Actors Delete
+
+DELETE http://localhost:3000/actors/30
+
+###Movies Index
+
+GET http://localhost:3000/movies
+
+###Movies Create
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Django Unchained",
+  "plot": "With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation-owner in Mississippi.",
+  "year": 2012
+}
+
+###Movies Show
+
+GET http://localhost:3000/movies/5
+
+###Movies Update
+
+PATCH http://localhost:3000/movies/5
+Content-Type: application/json
+
+{
+  "year": 2012
+}
+
+###Movies Delete
+
+DELETE http://localhost:3000/movies/6
