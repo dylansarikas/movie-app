@@ -9,7 +9,9 @@ class MoviesController < ApplicationController
     movies1 = Movie.new(
       title: params[:title],
       plot: params[:plot],
-      year: params[:year]
+      year: params[:year],
+      director: params[:director],
+      english: params[:english]
     )
     movies1.save
     render json:movies1
@@ -27,6 +29,8 @@ class MoviesController < ApplicationController
     movies1.title = params[:title] || movies1.title
     movies1.year = params[:year] || movies1.year
     movies1.plot = params[:plot] || movies1.plot
+    movies1.director = params[:director] || movies1.director
+    movies1.english = params[:english] || movies1.english
     movies1.save
     render json:movies1
   end

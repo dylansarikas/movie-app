@@ -8,9 +8,11 @@ POST http://localhost:3000/actors
 Content-Type: application/json
 
 {
-  "first_name": "Hornold",
-  "last_name": "Frunkerdink",
-  "known_for": "Faith 2"
+  "first_name": "Hunky",
+  "last_name": "Dorklestien",
+  "known_for": "Faith 3",
+  "age": 34,
+  "gender": "male"
 }
 
 ###Actors Show
@@ -18,12 +20,12 @@ GET http://localhost:3000/actors/24
 
 ###Actors Update
 
-PATCH http://localhost:3000/actors/24
+PATCH http://localhost:3000/actors/57
 Content-Type: application/json
 
 {
-  "first_name": "Banister",
-  "last_name": "Crumblebench"
+  "age": 33,
+  "gender": "male"
 }
 
 ###Actors Delete
@@ -40,24 +42,28 @@ POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-  "title": "Django Unchained",
-  "plot": "With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation-owner in Mississippi.",
-  "year": 2012
+  "title": "Pulp Fiction",
+  "plot": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+  "year": 2012,
+  "director": "Quentin Tarantino",
+  "english": true
 }
 
 ###Movies Show
 
-GET http://localhost:3000/movies/5
+GET http://localhost:3000/movies/7
 
 ###Movies Update
 
-PATCH http://localhost:3000/movies/5
+PATCH http://localhost:3000/movies/7
 Content-Type: application/json
 
 {
-  "year": 2012
+  "year": 2012,
+  "director": "Quentin Tarantino",
+  "english": true
 }
 
 ###Movies Delete
 
-DELETE http://localhost:3000/movies/6
+DELETE http://localhost:3000/movies/8
