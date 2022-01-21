@@ -13,8 +13,11 @@ class MoviesController < ApplicationController
       director: params[:director],
       english: params[:english]
     )
-    movies1.save
-    render json:movies1
+    if movies1.save
+      render json:movies1
+    else
+      render json: {errors: movies1.errors.full_messages}, status: :unprocessable_entity
+    end
   end
   
   def show
