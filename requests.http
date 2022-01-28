@@ -1,6 +1,11 @@
+@jwt1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDM0MTQ3MDZ9.-DpJb-aNvx0zKTeNFw3o2xt_ipJxYpA0C9Z9C6-TwzI
+
+@jwt2 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDM0MTYwNDF9.Y6xLDLEGFONzCdYuKnGZwjgTV5xOG_E4jmLZn1sHuHE
+
 ###Actors Index
 
 GET http://localhost:3000/actors
+Authorization: Bearer {{jwt1}}
 
 ###Actors Create
 
@@ -23,9 +28,10 @@ GET http://localhost:3000/actors/24
 
 PATCH http://localhost:3000/actors/57
 Content-Type: application/json
+Authorization: Bearer {{jwt2}}
 
 {
-  "age": 32,
+  "age": 35,
   "gender": "male"
 }
 
@@ -68,3 +74,25 @@ Content-Type: application/json
 ###Movies Delete
 
 DELETE http://localhost:3000/movies/8
+
+### Users create
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Tester Fester",
+  "email": "tester.fester@gmail.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create
+
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "tester.fester@gmail.com",
+  "password": "password"
+}
