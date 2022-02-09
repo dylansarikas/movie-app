@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   #before_action :authenticate_admin, except: [:index, :show]
 
   def index
-    movies1 = Movie.where("english = ?", true)
+    movies1 = Movie.all
     render json: movies1
   end
 
