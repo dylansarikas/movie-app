@@ -1,4 +1,4 @@
-@jwt1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDM0MTQ3MDZ9.-DpJb-aNvx0zKTeNFw3o2xt_ipJxYpA0C9Z9C6-TwzI
+@jwt1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDQ5NjQ0MzZ9.hJx4mW182rqmT8Puqg3vJgFhvbGukX0ZQqKXLOhbMFw
 
 @jwt2 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDM0MTYwNDF9.Y6xLDLEGFONzCdYuKnGZwjgTV5xOG_E4jmLZn1sHuHE
 
@@ -28,7 +28,7 @@ GET http://localhost:3000/actors/24
 
 PATCH http://localhost:3000/actors/57
 Content-Type: application/json
-Authorization: Bearer {{jwt2}}
+Authorization: Bearer {{jwt1}}
 
 {
   "age": 35,
@@ -87,7 +87,7 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
-### Sessions create
+### Sessions create LOGIN LOGIN LOGIN LOGIN LOGIN
 
 POST http://localhost:3000/sessions
 Content-Type: application/json
